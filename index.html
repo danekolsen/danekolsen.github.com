@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cat Toy</title>
+
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        img {
+            max-width:100%;
+        }
+        .ballrest{
+            height:50px;
+            width:50px;
+            border-radius: 50%;
+            position:absolute;
+            -webkit-transition: top 0.15s, left 0.15s; /* Safari */
+            transition: top 0.15s, left 0.15s;
+            top:38px;
+            left:38px;
+        }
+        .ballplay{
+            height:50px;
+            width:50px;
+            border-radius: 50%;
+            position:absolute;
+            -webkit-transition: top 0.15s, left 0.15s; /* Safari */
+            transition: top 0.15s, left 0.15s;
+        }
+        .boundary{
+            height:125px;
+            width:125px;
+            margin:-3px;
+            position:relative;
+            display: inline-block;
+        }
+    </style>
+
+    <script>
+
+        function start(id){
+            document.getElementById("ball"+id).classList.remove("ballrest")
+            document.getElementById("ball"+id).classList.add("ballplay")
+        }
+
+        function setBallPosition(id){
+
+            document.getElementById("ball"+id).style.top = (38 + 40 - event.offsetY) + "px";
+            document.getElementById("ball"+id).style.left = (38 + 40 - event.offsetX) + "px";
+
+        }
+
+        function reset(id){
+            document.getElementById("ball"+id).classList.remove("ballplay")
+            document.getElementById("ball"+id).classList.add("ballrest")
+            document.getElementById("ball"+id).style.top = "38px";
+            document.getElementById("ball"+id).style.left = "38px";
+        }
+        
+        function playSound(id){
+            if(id == 1){
+                var audio = new Audio('catSounds/cat1.mp3');
+                audio.play();
+            }
+            if(id == 2){
+                var audio = new Audio('catSounds/cat2.mp3');
+                audio.play();
+            }
+            if(id == 3){
+                var audio = new Audio('catSounds/cat3.mp3');
+                audio.play();
+            }
+            if(id == 4){
+                var audio = new Audio('catSounds/cat4.mp3');
+                audio.play();
+            }
+            if(id == 5){
+                var audio = new Audio('catSounds/cat5.mp3');
+                audio.play();
+            }
+            if(id == 6){
+                var audio = new Audio('catSounds/cat6.mp3');
+                audio.play();
+            }
+            if(id == 7){
+                var audio = new Audio('catSounds/cat7.mp3');
+                audio.play();
+            }
+            if(id == 8){
+                var audio = new Audio('catSounds/cat8.mp3');
+                audio.play();
+            }
+        }
+
+
+
+    </script>    
+
+</head>
+<body>
+    <div onmouseenter="start(1);playSound(1)" onmousemove="setBallPosition(1)" onmouseleave="reset(1)" class="boundary">
+        <div class="ballrest" id="ball1">
+            <img src="cats/cat1.png">
+        </div>
+    </div>
+    <div onmouseenter="start(2);playSound(2)" onmousemove="setBallPosition(2)" onmouseleave="reset(2)" class="boundary">
+        <div class="ballrest" id="ball2">
+            <img src="cats/cat2.png">
+        </div>
+    </div>
+    <div onmouseenter="start(3);playSound(3)" onmousemove="setBallPosition(3)" onmouseleave="reset(3)" class="boundary">
+        <div class="ballrest" id="ball3">
+            <img src="cats/cat3.png">
+        </div>
+    </div>
+    <div onmouseenter="start(4);playSound(4)" onmousemove="setBallPosition(4)" onmouseleave="reset(4)" class="boundary">
+        <div class="ballrest" id="ball4">
+            <img src="cats/cat4.png">
+        </div>
+    </div>
+    <div onmouseenter="start(5);playSound(5)" onmousemove="setBallPosition(5)" onmouseleave="reset(5)" class="boundary">
+        <div class="ballrest" id="ball5">
+            <img src="cats/cat5.png">
+        </div>
+    </div>
+    <br>
+    <div onmouseenter="start(6);playSound(6)" onmousemove="setBallPosition(6)" onmouseleave="reset(6)" class="boundary">
+        <div class="ballrest" id="ball6">
+            <img src="cats/cat6.png">
+        </div>
+    </div>
+    <div onmouseenter="start(7);playSound(7)" onmousemove="setBallPosition(7)" onmouseleave="reset(7)" class="boundary">
+        <div class="ballrest" id="ball7">
+            <img src="cats/cat7.png">
+        </div>
+    </div>
+    <div onmouseenter="start(8);playSound(8)" onmousemove="setBallPosition(8)" onmouseleave="reset(8)" class="boundary">
+        <div class="ballrest" id="ball8">
+            <img src="cats/cat8.gif">
+        </div>
+    </div>
+    <div onmouseenter="start(9);playSound(1)" onmousemove="setBallPosition(9)" onmouseleave="reset(9)" class="boundary">
+        <div class="ballrest" id="ball9">
+            <img src="cats/cat1.png">
+        </div>
+    </div>
+    <div onmouseenter="start(10);playSound(2)" onmousemove="setBallPosition(10)" onmouseleave="reset(10)" class="boundary">
+        <div class="ballrest" id="ball10">
+            <img src="cats/cat2.png">    
+        </div>
+    </div>
+    <br>
+    <div onmouseenter="start(11);playSound(3)" onmousemove="setBallPosition(11)" onmouseleave="reset(11)" class="boundary">
+        <div class="ballrest" id="ball11">
+            <img src="cats/cat3.png">
+        </div>
+    </div>
+    <div onmouseenter="start(12);playSound(4)" onmousemove="setBallPosition(12)" onmouseleave="reset(12)" class="boundary">
+        <div class="ballrest" id="ball12">
+            <img src="cats/cat4.png">
+        </div>
+    </div>
+    <div onmouseenter="start(13);playSound(5)" onmousemove="setBallPosition(13)" onmouseleave="reset(13)" class="boundary">
+        <div class="ballrest" id="ball13">
+            <img src="cats/cat5.png">
+        </div>
+    </div>
+    <div onmouseenter="start(14);playSound(6)" onmousemove="setBallPosition(14)" onmouseleave="reset(14)" class="boundary">
+        <div class="ballrest" id="ball14">
+            <img src="cats/cat6.png">
+        </div>
+    </div>
+    <div onmouseenter="start(15);playSound(7)" onmousemove="setBallPosition(15)" onmouseleave="reset(15)" class="boundary">
+        <div class="ballrest" id="ball15">
+            <img src="cats/cat7.png">
+        </div>
+    </div>
+    <br>
+    <div onmouseenter="start(16);playSound(8)" onmousemove="setBallPosition(16)" onmouseleave="reset(16)" class="boundary">
+        <div class="ballrest" id="ball16">
+            <img src="cats/cat8.gif">
+        </div>
+    </div>
+    <div onmouseenter="start(17);playSound(1)" onmousemove="setBallPosition(17)" onmouseleave="reset(17)" class="boundary">
+        <div class="ballrest" id="ball17">
+            <img src="cats/cat1.png">
+        </div>
+    </div>
+    <div onmouseenter="start(18);playSound(2)" onmousemove="setBallPosition(18)" onmouseleave="reset(18)" class="boundary">
+        <div class="ballrest" id="ball18">
+            <img src="cats/cat2.png">
+        </div>
+    </div>
+    <div onmouseenter="start(19);playSound(3)" onmousemove="setBallPosition(19)" onmouseleave="reset(19)" class="boundary">
+        <div class="ballrest" id="ball19">
+            <img src="cats/cat3.png">
+        </div>
+    </div>
+    <div onmouseenter="start(20);playSound(4)" onmousemove="setBallPosition(20)" onmouseleave="reset(20)" class="boundary">
+        <div class="ballrest" id="ball20">
+            <img src="cats/cat4.png">
+        </div>
+    </div>
+    <br>
+    <div onmouseenter="start(21);playSound(5)" onmousemove="setBallPosition(21)" onmouseleave="reset(21)" class="boundary">
+        <div class="ballrest" id="ball21">
+            <img src="cats/cat5.png">
+        </div>
+    </div>
+    <div onmouseenter="start(22);playSound(6)" onmousemove="setBallPosition(22)" onmouseleave="reset(22)" class="boundary">
+        <div class="ballrest" id="ball22">
+            <img src="cats/cat6.png">
+        </div>
+    </div>
+    <div onmouseenter="start(23);playSound(7)" onmousemove="setBallPosition(23)" onmouseleave="reset(23)" class="boundary">
+        <div class="ballrest" id="ball23">
+            <img src="cats/cat7.png">
+        </div>
+    </div>
+    <div onmouseenter="start(24);playSound(8)" onmousemove="setBallPosition(24)" onmouseleave="reset(24)" class="boundary">
+        <div class="ballrest" id="ball24">
+            <img src="cats/cat8.gif">
+        </div>
+    </div>
+    <div onmouseenter="start(25);playSound(1)" onmousemove="setBallPosition(25)" onmouseleave="reset(25)" class="boundary">
+        <div class="ballrest" id="ball25">
+            <img src="cats/cat1.png">
+        </div>
+    </div>
+    <h6>Click for sound!</h6>
+</body>
+</html>
